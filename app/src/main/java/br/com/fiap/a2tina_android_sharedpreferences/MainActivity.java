@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        
+        String usuario = edtUsuario.getText().toString();
+        String senha = edtSenha.getText().toString();
+
+        if (usuario.trim().equals("fiap") && senha.trim().equals("123")){
+            if(chkSalvar.isChecked()){
+
+            }
+            //Lógica para abrir outra activity
+            return;
+        }
+
+        Toast.makeText(this, R.string.usuario_incorreto, Toast.LENGTH_SHORT).show();
     }
 }
