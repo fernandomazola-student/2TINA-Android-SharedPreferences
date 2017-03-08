@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (usuario.trim().equals("fiap") && senha.trim().equals("123")){
             if(chkSalvar.isChecked()){
-
+                SharedPreferences.Editor e = sp.edit();
+                e.putString("usuario", usuario);
+                e.putString("senha", senha);
+                e.commit();
             }
             //Lógica para abrir outra activity
             return;
