@@ -1,5 +1,6 @@
 package br.com.fiap.a2tina_android_sharedpreferences;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 e.remove("senha");
             }
             //Lógica para abrir outra activity
+            Intent it = new Intent(this, DadosActivity.class);
+            startActivity(it);
             return;
         }
 
