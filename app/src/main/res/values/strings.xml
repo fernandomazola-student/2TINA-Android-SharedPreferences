@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">2TINA-Android-SharedPreferences</string>
+    <string name="app_name">Login com Shared Preferences</string>
     <string name="usuario">Usuário:</string>
     <string name="senha">Senha:</string>
     <string name="usuario_incorreto">Usuáro ou Senha Incorreta</string>
+    <string name="lembrar">Lembrar-me</string>
 </resources>
