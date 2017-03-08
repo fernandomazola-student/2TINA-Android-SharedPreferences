@@ -38,11 +38,17 @@ public class MainActivity extends AppCompatActivity {
         String senha = edtSenha.getText().toString();
 
         if (usuario.trim().equals("fiap") && senha.trim().equals("123")){
+
+            SharedPreferences.Editor e = sp.edit();
+
             if(chkSalvar.isChecked()){
-                SharedPreferences.Editor e = sp.edit();
+                //SharedPreferences.Editor e = sp.edit();
                 e.putString("usuario", usuario);
                 e.putString("senha", senha);
                 e.commit();
+            }else{
+                e.remove("usuario");
+                e.remove("senha");
             }
             //Lógica para abrir outra activity
             return;
