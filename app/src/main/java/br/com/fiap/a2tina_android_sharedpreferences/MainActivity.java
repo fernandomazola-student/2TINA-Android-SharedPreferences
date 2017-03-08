@@ -1,5 +1,6 @@
 package br.com.fiap.a2tina_android_sharedpreferences;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +13,7 @@ public class MainActivity extends AppCompatActivity {
     EditText edtUsuario;
     EditText edtSenha;
     CheckBox chkSalvar;
-
-
+    SharedPreferences sp;
 
 
     @Override
@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         edtUsuario = (EditText)findViewById(R.id.edtusuario);
         edtSenha = (EditText)findViewById(R.id.edtsenha);
         chkSalvar = (CheckBox)findViewById(R.id.chkSalvar);
+
+        //Inicializa o shared preferences no modo privado
+        sp = getPreferences(MODE_PRIVATE);
     }
 
     public void login(View view) {
