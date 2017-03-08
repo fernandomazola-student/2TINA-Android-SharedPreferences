@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">2TINA-Android-SharedPreferences</string>
+    <string name="usuario">Usuário:</string>
+    <string name="senha">Senha:</string>
 </resources>
